@@ -1,111 +1,148 @@
+/* Сброс стандартных стилей */
 * {
+    /* Убираем внешние отступы */
     margin: 0;
+    /* Убираем внутренние отступы */
     padding: 0;
+    /* Размер включает padding и border */
     box-sizing: border-box;
 }
-
+/* Настройки всей страницы */
 body {
+    /* Шрифт сайта */
     font-family: Arial, sans-serif;
+    /* Высота строк */
     line-height: 1.6;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+/* Главный баннер */
 .promo {
-    background-image: url('fon.jpg'); /* Замените на путь к вашей фотографии */
+    /* Фоновая картинка */
+    background-image: url('fon.jpg');
+    /* Растянуть картинку */
     background-size: cover;
+    /* Центрировать изображение */
     background-position: center;
+    /* Не повторять изображение */
     background-repeat: no-repeat;
+    /* Высота на весь экран */
     height: 100vh;
+    /* Включение Flexbox */
     display: flex;
+    /* Центр по вертикали */
     align-items: center;
+    /* Центр по горизонтали */
     justify-content: center;
+    /* Выравнивание текста */
     text-align: center;
+    /* Белый цвет текста */
     color: white;
+    /* Относительное позиционирование */
     position: relative;
 }
-
 /* Затемнение фона для лучшей читаемости текста */
 .promo::before {
+    /* Создание псевдоэлемента */
     content: '';
+    /* Абсолютное позиционирование */
     position: absolute;
+    /* Верхняя граница */
     top: 0;
+    /* Левая граница */
     left: 0;
+    /* Ширина */
     width: 100%;
+    /* Высота */
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный слой */
+    /* Полупрозрачный черный фон */
+    background: rgba(0, 0, 0, 0.5);
+    /* Слой поверх картинки */
     z-index: 1;
 }
-
+/* Контент баннера */
 .promo-content {
+    /* Относительное позиционирование */
     position: relative;
+    /* Слой выше затемнения */
     z-index: 2;
+    /* Внутренние отступы */
     padding: 20px;
 }
-
+/* Заголовок */
 .promo h1 {
+    /* Размер текста */
     font-size: 3rem;
+    /* Нижний отступ */
     margin-bottom: 1rem;
+    /* Тень текста */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
+/* Текст описания */
 .promo p {
+    /* Размер текста */
     font-size: 1.2rem;
+    /* Отступ снизу */
     margin-bottom: 2rem;
+    /* Максимальная ширина */
     max-width: 600px;
+    /* Централизирование слева */
     margin-left: auto;
+    /* Централизирование справа */
     margin-right: auto;
 }
-
-
-
-
+/* Кнопка */
 .cta-button {
+    /* Цвет кнопки */
     background-color: #ff6b35;
+    /* Цвет текста */
     color: white;
+    /* Убираем рамку */
     border: none;
+    /* Внутренние отступы */
     padding: 15px 30px;
+    /* Размер текста */
     font-size: 1.1rem;
+    /* Курсор-указатель */
     cursor: pointer;
+    /* Скругление углов */
     border-radius: 5px;
+    /* Плавная анимация */
     transition: background-color 0.3s ease;
 }
-
+/* Наведение на кнопку */
 .cta-button:hover {
+    /* Новый цвет кнопки */
     background-color: #782e16;
 }
-
-/* Адаптивность для мобильных устройств */
+/* Адаптивность для мобильных устройств, планшеты */
 @media (max-width: 768px) {
+    /* Заголовок */
     .promo h1 {
+        /* Новый размер */
         font-size: 2rem;
     }
-    
+    /* Текст */
     .promo p {
+        /* Новый размер */
         font-size: 1rem;
     }
-    
+    /* Кнопка */
     .cta-button {
+        /* Новые отступы */
         padding: 12px 25px;
+        /* Новый размер текста */
         font-size: 1rem;
     }
 }
-
+/* Телефоны */
 @media (max-width: 480px) {
+    /* Заголовок */
     .promo h1 {
+        /* Размер меньше */
         font-size: 1.5rem;
     }
-    
+    /* Текст */
     .promo p {
+        /* Размер меньше */
         font-size: 0.9rem;
     }
 }
